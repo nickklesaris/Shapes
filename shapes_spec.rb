@@ -1,6 +1,50 @@
 require 'rspec'
 require_relative 'square'
 require_relative 'circle'
+require_relative 'rectangle'
+
+
+describe Rectangle do
+    it 'calculates the area' do
+    square = Rectangle.new(10.0, 5.0)
+    expect(square.area).to eq(50.0)
+  end
+
+  it 'calculates the area' do
+    square = Rectangle.new(17.0, 31.0)
+    expect(square.area).to eq(527.0)
+  end
+
+  it 'calculates the area' do
+    square = Rectangle.new(10.0, 2.0)
+    expect(square.area).to eq(20.0)
+  end
+  it 'calculates the area' do
+    square = Rectangle.new(111.0, 92.0)
+    expect(square.area).to eq(10212.0)
+  end
+
+  it 'calculates the perimeter' do
+    square = Rectangle.new(10.0, 5.0)
+    expect(square.perimeter).to eq(30.0)
+  end
+
+  it 'calculates the perimeter' do
+    square = Rectangle.new(17.0, 31.0)
+    expect(square.perimeter).to eq(96.0)
+  end
+
+  it 'calculates the perimeter' do
+    square = Rectangle.new(10.0, 2.0)
+    expect(square.perimeter).to eq(24.0)
+  end
+
+  it 'calculates the perimeter' do
+    square = Rectangle.new(111.0, 92.0)
+    expect(square.perimeter).to eq(406.0)
+  end
+
+end
 
 describe Square do
   it 'calculates the perimeter' do
