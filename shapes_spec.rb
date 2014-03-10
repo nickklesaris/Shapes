@@ -2,74 +2,108 @@ require 'rspec'
 require_relative 'square'
 require_relative 'circle'
 require_relative 'rectangle'
+require_relative 'triangle'
 
+
+describe Triangle do
+    it 'calculates the hypotenuse of a right triangle' do
+    rt_triangle = Triangle.new(3.0, 4.0)
+    expect(rt_triangle.hypotenuse).to eq(5.0)
+  end
+
+    it 'calculates the hypotenuse of a right triangle' do
+    rt_triangle = Triangle.new(6.0, 8.0)
+    expect(rt_triangle.hypotenuse).to eq(10.0)
+  end
+
+    it 'calculates the perimeter of a right triangle' do
+    rt_triangle = Triangle.new(3.0, 4.0)
+    expect(rt_triangle.perimeter).to eq(12.0)
+  end
+
+    it 'calculates the perimeter of a right triangle' do
+    rt_triangle = Triangle.new(6.0, 8.0)
+    expect(rt_triangle.perimeter).to eq(24.0)
+  end
+    it 'calculates the area of a right triangle' do
+    rt_triangle = Triangle.new(3.0, 4.0)
+    expect(rt_triangle.area).to eq(6.0)
+  end
+
+    it 'calculates the area of a right triangle' do
+    rt_triangle = Triangle.new(6.0, 8.0)
+    expect(rt_triangle.area).to eq(24.0)
+  end
+
+
+end
 
 describe Rectangle do
     it 'calculates the area' do
-    square = Rectangle.new(10.0, 5.0)
-    expect(square.area).to eq(50.0)
+    shape = Rectangle.new(10.0, 5.0)
+    expect(shape.area).to eq(50.0)
   end
 
   it 'calculates the area' do
-    square = Rectangle.new(17.0, 31.0)
-    expect(square.area).to eq(527.0)
+    shape = Rectangle.new(17.0, 31.0)
+    expect(shape.area).to eq(527.0)
   end
 
   it 'calculates the area' do
-    square = Rectangle.new(10.0, 2.0)
-    expect(square.area).to eq(20.0)
+    shape = Rectangle.new(10.0, 2.0)
+    expect(shape.area).to eq(20.0)
   end
   it 'calculates the area' do
-    square = Rectangle.new(111.0, 92.0)
-    expect(square.area).to eq(10212.0)
+    shape = Rectangle.new(111.0, 92.0)
+    expect(shape.area).to eq(10212.0)
   end
 
   it 'calculates the perimeter' do
-    square = Rectangle.new(10.0, 5.0)
-    expect(square.perimeter).to eq(30.0)
+    shape = Rectangle.new(10.0, 5.0)
+    expect(shape.perimeter).to eq(30.0)
   end
 
   it 'calculates the perimeter' do
-    square = Rectangle.new(17.0, 31.0)
-    expect(square.perimeter).to eq(96.0)
+    shape = Rectangle.new(17.0, 31.0)
+    expect(shape.perimeter).to eq(96.0)
   end
 
   it 'calculates the perimeter' do
-    square = Rectangle.new(10.0, 2.0)
-    expect(square.perimeter).to eq(24.0)
+    shape = Rectangle.new(10.0, 2.0)
+    expect(shape.perimeter).to eq(24.0)
   end
 
   it 'calculates the perimeter' do
-    square = Rectangle.new(111.0, 92.0)
-    expect(square.perimeter).to eq(406.0)
+    shape = Rectangle.new(111.0, 92.0)
+    expect(shape.perimeter).to eq(406.0)
   end
 
 end
 
 describe Square do
   it 'calculates the perimeter' do
-    square = Square.new(10.0)
-    expect(square.perimeter).to eq(40.0)
+    shape = Square.new(10.0)
+    expect(shape.perimeter).to eq(40.0)
   end
   it 'calculates the perimeter' do
-    square = Square.new(13.0)
-    expect(square.perimeter).to eq(52.0)
+    shape = Square.new(13.0)
+    expect(shape.perimeter).to eq(52.0)
   end
 it 'calculates the perimeter' do
-    square = Square.new(27.0)
-    expect(square.perimeter).to eq(108.0)
+    shape = Square.new(27.0)
+    expect(shape.perimeter).to eq(108.0)
   end
 it 'calculates the area' do
-    square = Square.new(10.0)
-    expect(square.area).to eq(100.0)
+    shape = Square.new(10.0)
+    expect(shape.area).to eq(100.0)
   end
 it 'calculates the area' do
-    square = Square.new(13.0)
-    expect(square.area).to eq(169.0)
+    shape = Square.new(13.0)
+    expect(shape.area).to eq(169.0)
   end
 it 'calculates the area' do
-    square = Square.new(27.0)
-    expect(square.area).to eq(729.0)
+    shape = Square.new(27.0)
+    expect(shape.area).to eq(729.0)
   end
 end
 
@@ -104,3 +138,4 @@ it 'calculates the area' do
     expect(circle.area).to eq(1075.21)
   end
 end
+
